@@ -32,3 +32,11 @@ describe('getOperands', function(){
         }
     );
 });
+describe('getOperands', function(){
+    test('should return 0 from operation 1.2 1 -3.',
+        function(){
+            const result4 = getOperands('1.2 1 -3.4') 	
+            expect(result4).toBe(0)
+        }
+    );
+});

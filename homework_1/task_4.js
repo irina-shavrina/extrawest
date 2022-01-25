@@ -18,7 +18,7 @@ export function getOperands(string){
 
     if (!isOperator(symbol)){
         console.log(`Symbol is not correct - ${symbol}`)
-        return;
+        return 0;
     }
 
     if(isNaN(leftPart) || isNaN(rightPart)){
