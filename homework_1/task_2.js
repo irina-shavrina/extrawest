@@ -1,4 +1,4 @@
-export function stringMerge(firstWord, secondWord, letterToDivide){
+export function stringMerge(firstWord, secondWord, letterToDivide){ //slice
     let result="";
 
     result = returnLettersUntil(firstWord, letterToDivide) + 
