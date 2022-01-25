@@ -7,16 +7,12 @@ describe('createPhoneNumber', function(){
             expect(result).toBe("(123) 456-7890")
         }
     );
-});
-describe('createPhoneNumber', function(){
     test('should return phone number (123) 456-7890',
         function(){
             const result = createPhoneNumber([0, 8, 3, 1, 5, 4, 7, 8, 5, 0])
             expect(result).toBe("(083) 154-7850")
         }
     );
-});
-describe('createPhoneNumber', function(){
     test('should return phone number (123) 456-7890',
         function(){
             const result = createPhoneNumber([0, 6, 6, 3, 3, 9, 4, 4, 9, 6])
