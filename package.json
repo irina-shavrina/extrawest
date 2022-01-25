@@ -1,0 +1,33 @@
+{
+  "dependencies": {
+    "-": "^0.0.1",
+    "@babel/core": "^7.16.12",
+    "@babel/preset-env": "^7.16.11",
+    "babel-jest": "^27.4.6",
+    "jest": "^27.4.7",
+    "save-dev": "^0.0.1-security"
+  },
+  "devDependencies": {
+    "jest": "^27.4.7"
+  },
+  "jest": {
+    "verbose": true
+  },
+  "name": "extrawest",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/irina-shavrina/extrawest.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/irina-shavrina/extrawest/issues"
+  },
+  "homepage": "https://github.com/irina-shavrina/extrawest#readme"
+}
