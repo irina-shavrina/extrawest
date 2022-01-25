@@ -7,6 +7,7 @@ export function getTime(str){
             return item[0];
         }
     }
+    return '';
 }
 function isTimeValid(timeStr){
     let items = timeStr.split(':');

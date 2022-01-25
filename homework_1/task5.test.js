@@ -19,4 +19,10 @@ describe('getTime', function(){
             expect(result3).toBe('09:59')
         }
     );
+    test('should return " " from sentence Breakfast at 09:59, Dinner at 21:00',
+    function(){
+        const result4 = getTime('Breakfast at 0, Dinner at 21:61') 
+        expect(result4).toBe('')
+    }
+);
 });
