@@ -1,18 +1,3 @@
-// export function stringMerge(firstWord, secondWord, result){
-//     let newWord = "";
-//     for(let i=0; i < firstWord.length; i++){
-//         if(firstWord[i] == result){
-//             break
-//         }
-//         newWord += firstWord[i];
-//     }
-//     newWord += result;
-//     let indexFrom = secondWord.indexOf(result)
-//     for(let j=indexFrom; j < secondWord.length; j++){
-//         newWord += secondWord[j];
-//     }
-//     return newWord;
-// }
 export function stringMerge(firstWord, secondWord, letterToDivide){
     let result;
 
