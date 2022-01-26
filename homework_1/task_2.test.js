@@ -25,4 +25,16 @@ describe('stringMerge', function(){
             expect(result4).toBe("wondeople")
         }
     );
+    test('should return "" from words 100 and people',
+        function(){
+            const result4 = stringMerge(100, "people", "e")
+            expect(result4).toBe("")
+        }
+    );
+    test('should return "" from words 100 and people',
+        function(){
+            const result4 = stringMerge("biba", "people", "e")
+            expect(result4).toBe("")
+        }
+    );
 });

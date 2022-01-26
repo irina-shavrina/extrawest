@@ -38,6 +38,3 @@ function isOperator(symbol){
     return false;
 }
 
-console.log(getOperands('1 + 2'));
-console.log(getOperands('1.2 * -3.4') );
-console.log(getOperands('1 - 2') );

@@ -31,4 +31,10 @@ describe('basikOp', function(){
         expect(result1).toBe(0)
     }
 );
+test('should return 0 when divide h and 7',
+        function(){
+            const result1 = basikOp('/', "h", 7)
+            expect(result1).toBe(0)
+        }
+    );
 });
