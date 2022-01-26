@@ -1,28 +1,11 @@
-export function stringMerge(firstWord, secondWord, letterToDivide){ //slice
-    let result="";
+export function stringMerge(firstWord, secondWord, letterToDivide){ 
 
-    result = returnLettersUntil(firstWord, letterToDivide) + 
-            letterToDivide + 
-            returnLettersBefore(secondWord, letterToDivide);
+    const divideIndexOfFirstWord = firstWord.indexOf(letterToDivide);
+    const divideIndexOfSecondWord = secondWord.indexOf(letterToDivide);
 
-    return result;
-}
-function returnLettersUntil(word, letterToFind){
-    let result = "";
-    for(let item of word){
-        if(item === letterToFind){
-            break;
-        }
-        result+=item;
-    }
-    return result;
-}
-function returnLettersBefore(word, letterToFind){
-    let result = "";
-    let indexFrom = word.indexOf(letterToFind)
-    for(let index = indexFrom + 1; index < word.length; ++index){
-        result+=word[index];
-    }
+    let result = firstWord.slice(0, divideIndexOfFirstWord) 
+                + secondWord.slice((divideIndexOfSecondWord), secondWord.length);
+    
     return result;
 }
 console.log(stringMerge("hello", "world", "l"));

@@ -31,4 +31,16 @@ describe('getOperands', function(){
             expect(result4).toBe(0)
         }
     );
+    test('should return 0 from no operation',
+        function(){
+            const result4 = getOperands('') 	
+            expect(result4).toBe(0)
+        }
+    );
+    test('should return 0 from operation k * -3.4',
+        function(){
+            const result4 = getOperands('k * -3.4') 	
+            expect(result4).toBe(0)
+        }
+    );
 });

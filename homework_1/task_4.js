@@ -10,7 +10,7 @@ export function getOperands(string){
     const elements = string.split(' ');
     if(elements.length !== maxSizeOfExpression){
         console.log("Size of expression is bigger than " + maxSizeOfExpression)
-        return;
+        return 0;
     }
     const leftPart = Number(elements[leftPartOfExpression]);
     const symbol = elements[symbolPositionInExpression];
@@ -23,7 +23,7 @@ export function getOperands(string){
 
     if(isNaN(leftPart) || isNaN(rightPart)){
         console.log(`One path of exp is not valid`)
-        return;
+        return 0;
     }
     let result = `a:${leftPart}, b:${rightPart}`
 

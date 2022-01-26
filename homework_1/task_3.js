@@ -4,21 +4,12 @@ const endOfFirstPath = 3;
 const startOfSecondPath = 3;
 const endOfSecondPath = 6;
 
-const startOfThirdPath = 6;
-const endOfThirdPath = 10;
-export function createPhoneNumber(numbers){
-    if(numbers.length > 10 || !checkArrayContainsOnlyNumbers(numbers))
-        return;
+export function createPhoneNumber(numbers) {
+    if(numbers.length > 10 || !checkArrayContainsOnlyNumbers(numbers)){
+        return "";
+    }
+    return (numbers.join('').replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3'));
 
-    let phoneNumber = "";
-    
-    let firstPart = numbers.slice(startOfFirstPath, endOfFirstPath).join('');
-    let secondPart = numbers.slice(startOfSecondPath, endOfSecondPath).join('');
-    let thirdPart = numbers.slice(startOfThirdPath, endOfThirdPath).join('');
-
-    phoneNumber = `(${firstPart}) ${secondPart}-${thirdPart}`
-
-    return phoneNumber;
 }
 function checkArrayContainsOnlyNumbers(array){
     return array.every(item => Number.isInteger(item));

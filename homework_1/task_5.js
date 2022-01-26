@@ -1,6 +1,6 @@
 const regex = /\d\d:\d\d/g
 export function getTime(str){
-    let matches = [...str.match(regex)]
+    let matches = [...str.matchAll(regex)]
 
     for(let item of matches){
         if(isTimeValid(item[0])){
