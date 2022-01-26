@@ -10,10 +10,6 @@ export function basikOp(sign, x, y){
             return x * y;
         case "/":
             return x / y;
-        case "%":
-            return x % y;
-        case "^":
-            return x ^ y;
         default:
             return 0;
     }
