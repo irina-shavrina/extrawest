@@ -1,4 +1,4 @@
-function swapCase(string){
+export function swapCase(string){
     let result = "";
 
     if(typeof(string) !== 'string')
@@ -15,4 +15,3 @@ function changeCase(symbol){
 function isUpperCase(symbol){
     return symbol.toUpperCase() === symbol;
 }
-console.log(swapCase("aBc"));

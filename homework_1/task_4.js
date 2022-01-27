@@ -25,9 +25,8 @@ export function getOperands(string){
         console.log(`One path of exp is not valid`)
         return 0;
     }
-    let result = `a:${leftPart}, b:${rightPart}`
 
-    return result;
+    return `a:${leftPart}, b:${rightPart}`;
 }
 function isOperator(symbol){
     for(var operator of allowedOperators){
