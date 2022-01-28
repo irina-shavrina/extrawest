@@ -9,13 +9,12 @@ export function isPalindrome (string){
         return true;
 
     const stringToProcess = string.replaceAll(regexForNonLetters, '').toUpperCase();
-    const reversedStringToProcess = reverse(string).replaceAll(regexForNonLetters, '').toUpperCase();
+    const reversedStringToProcess = reverse(stringToProcess);
     
-    for(let i = 0; i < stringToProcess.length && i < reversedStringToProcess.length; i++){
-        if(stringToProcess[i] !== reversedStringToProcess[i]){
-            return false;
-        }
+    if(stringToProcess !== reversedStringToProcess){
+        return false;
     }
+
     return true;    
 }
 function reverse(inputString){

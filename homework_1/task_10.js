@@ -5,7 +5,7 @@ export function alphabetPosition(string){
         return "";
     } 
 
-    let result = [];
+    const result = [];
     const stringToProcess = string.replace(/[^a-zA-Z]/g, '');
 
     for(let symbol of stringToProcess){
