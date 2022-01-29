@@ -5,9 +5,9 @@ export function countOccurrences(string, symbol){
     } 
 
     let amountOfSymbols = 0;
+    const upperSymbol = symbol.toUpperCase();
 
     for( let i = 0; i < string.length; i++){
-        const upperSymbol = symbol.toUpperCase();
         if((string[i]).toUpperCase() === upperSymbol){
             amountOfSymbols++;
         }

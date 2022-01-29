@@ -7,5 +7,5 @@ export function vowelCount(string){
     let countOfVowels = 0;
     countOfVowels = string.match(regexForVowels);
     
-    return countOfVowels?countOfVowels.length:0;
+    return countOfVowels ? countOfVowels.length : 0;
 }
