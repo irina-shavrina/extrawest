@@ -1,12 +1,6 @@
-    export const isPrime = number => {
-        let count = 0;
-        if(number <= 1){
-            return false;
-        }
-        for(let i = 1; i <= number; i++){
-            if(!(number%i)){
-                count++;
-            }
-        }
-        return !(count<=2);
-    }
+export const isPrime = (number) => {
+    for(let i = 2, s = Math.sqrt(number); i <= s; i++)
+        if(number % i === 0) 
+            return false; 
+    return number > 1;
+}

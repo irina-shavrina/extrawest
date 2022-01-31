@@ -1,9 +1,17 @@
 export const moveZeros = array => {
-    array.forEach(function(item, index) {
-        if (item === 0) {
-            array.push(item);
-            array.splice(index, 1);
+    let zeros = 0;
+    const result = [];
+    array.forEach(item => {
+        if(item === 0){
+            zeros++;
         }
-    });
-        return array;
+        else {
+            result.push(item);
+        }
+    })
+    for(let i = 0; i < zeros; ++i){
+        result.push(0)
+    }
+    // result.concat(Array(zeros).fill(0))
+    return result;
 }
