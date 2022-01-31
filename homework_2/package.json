@@ -1,0 +1,25 @@
+{
+  "name": "homework_2",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "-": "^0.0.1",
+    "@babel/core": "^7.16.12",
+    "@babel/preset-env": "^7.16.11",
+    "babel-jest": "^27.4.6",
+    "jest": "^27.4.7",
+    "save-dev": "^0.0.1-security"
+  },
+  "devDependencies": {
+    "jest": "^27.4.7"
+  },
+  "jest": {
+    "verbose": true
+  }
+}
