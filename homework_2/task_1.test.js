@@ -1,40 +1,40 @@
 import {calculateRentalCost} from './task_1';
 
 describe('calculateRentalCost', function(){
-    test('should return 11 when pass 4 and 7',
+    test('should return 80$ for 2 days rent',
         function(){
-            const result1 = calculateRentalCost(2) 
-            expect(result1).toBe(80)
+            const result = calculateRentalCost(2) 
+            expect(result).toBe(80)
         }
     );
-    test('should return -3 when subtract 15 and 18',
+    test('should return 100$ for 3 days rent',
         function(){
-            const result1 = calculateRentalCost(3)
-            expect(result1).toBe(100)
+            const result = calculateRentalCost(3)
+            expect(result).toBe(100)
         }
     );
-    test('should return 25 when multiply 5 and 5',
+    test('should return 230$ for 7 days rent',
         function(){
-            const result1 = calculateRentalCost(7)
-            expect(result1).toBe(230)
+            const result = calculateRentalCost(7)
+            expect(result).toBe(230)
         }
     );
-    test('should return 25 when multiply 5 and 5',
+    test('should return 0 from string "qwerty"',
         function(){
-            const result1 = calculateRentalCost("qwerty")
-            expect(result1).toBe(0)
+            const result = calculateRentalCost("qwerty")
+            expect(result).toBe(0)
         }
     );
-    test('should return 25 when multiply 5 and 5',
+    test('should return 0 from nothing',
         function(){
-            const result1 = calculateRentalCost()
-            expect(result1).toBe(0)
+            const result = calculateRentalCost()
+            expect(result).toBe(0)
         }
     );
-    test('should return 25 when multiply 5 and 5',
+    test('should return 0 from string ""',
         function(){
-            const result1 = calculateRentalCost("")
-            expect(result1).toBe(0)
+            const result = calculateRentalCost("")
+            expect(result).toBe(0)
         }
     );
 });

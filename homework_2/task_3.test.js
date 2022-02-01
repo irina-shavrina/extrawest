@@ -1,34 +1,34 @@
 import {isPrime} from './task_3';
 
 describe('isPrime', function(){
-    test('should return 11 when pass 4 and 7',
+    test('should return true from number 2',
         function(){
-            const result1 = isPrime(2) 
-            expect(result1).toBe(true)
+            const result = isPrime(2) 
+            expect(result).toBe(true)
         }
     );
-    test('should return -3 when subtract 15 and 18',
+    test('should return true from number 73',
         function(){
-            const result1 = isPrime(73)
-            expect(result1).toBe(true)
+            const result = isPrime(73)
+            expect(result).toBe(true)
         }
     );
-    test('should return 25 when multiply 5 and 5',
+    test('should return false from number 1',
         function(){
-            const result1 = isPrime(1)
-            expect(result1).toBe(false)
+            const result = isPrime(1)
+            expect(result).toBe(false)
         }
     );
-    test('should return 25 when multiply 5 and 5',
+    test('should return false from number 75',
         function(){
-            const result1 = isPrime(75)
-            expect(result1).toBe(false)
+            const result = isPrime(75)
+            expect(result).toBe(false)
         }
     );
-    test('should return 25 when multiply 5 and 5',
+    test('should return false from number -1',
         function(){
-            const result1 = isPrime(-1)
-            expect(result1).toBe(false)
+            const result = isPrime(-1)
+            expect(result).toBe(false)
         }
     );
 });
