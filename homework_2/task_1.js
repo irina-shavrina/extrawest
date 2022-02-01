@@ -3,7 +3,7 @@ export const calculateRentalCost = rentalDay => {
     if(typeof(rentalDay) !== "number"){
         return 0;
     }
-    let totalCost = carRentPrice*rentalDay;
+    let totalCost = carRentPrice * rentalDay;
     if (rentalDay >= 7){
         totalCost -= 50;
     }
