@@ -1,6 +1,8 @@
 export const isPrime = (number) => {
-    for(let i = 2, s = Math.sqrt(number); i <= s; i++)
+    const squareRootOfNumber = Math.sqrt(number);
+    for(let i = 2; i <= squareRootOfNumber; i++){
         if(number % i === 0) 
-            return false; 
+            return false;
+    } 
     return number > 1;
 }
