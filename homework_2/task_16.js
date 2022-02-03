@@ -9,4 +9,5 @@ export const fearNotLetter  = (string) => {
             return alphabetSlice[i];
         }
     }
+    return undefined;
 }
