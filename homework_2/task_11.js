@@ -1,15 +1,15 @@
-const makeArmy = (number) =>{
+export const makeArmy = (countOfEntities) =>{
 
-    return Array(end + 1).fill().map((_, idx) => returnIndex)
     const arrayOfNumbers = [];
-    while(arrayOfNumbers < number){
-        return () => {
-            return makeArmy(number);
+    let index = 0;
+    while(index < countOfEntities){
+        let number = index;
+        arrayOfNumbers[index] = () => {
+            return number
         };
+        ++index;
     }
-    
+    return arrayOfNumbers;
 }
-const returnIndex = (index) =>{
-    return index;
-}
-console.log(); 
+
+let res = makeArmy(5)
