@@ -1,8 +1,8 @@
 import {transformState} from './task_8';
 
-describe('transformState', function(){
+describe('transformState', () => {
     test('should return { foo: "bar", name: "Jim" } from object',
-        function(){
+        () => {
             const result = transformState(
                 {foo: 'bar', name: 'Jim', another: 'one'},
                 [
@@ -16,7 +16,7 @@ describe('transformState', function(){
         }
     );
     test('should return { foo: "bar", name: "Jim" } from object',
-        function(){
+        () => {
             const state =  {foo: 'bar', name: 'Jim', another: 'one'};
             const transforms =  [
                 {operation: 'addProperties', properties: {yet: 'another property'}}, 
@@ -29,7 +29,7 @@ describe('transformState', function(){
         }
     );
     test('should return { name: "Jim" } from object',
-        function(){
+        () => {
             const state =  {};
             const transforms =  [
                 {operation: 'addProperties', properties: { name: 'Jim' }},
@@ -40,7 +40,7 @@ describe('transformState', function(){
         }
     );
     test('should return {} from object',
-        function(){
+        () => {
             const state =  {foo: 'bar', name: 'Jim', another: 'one'};
             const transforms =  [
                 { operation: 'clear' },
@@ -51,7 +51,7 @@ describe('transformState', function(){
         }
     );
     test('should return { foo: "bar" } from object',
-        function(){
+        () => {
             const state =  {foo: 'bar', name: 'Jim', another: 'one'};
             const transforms =  [
                 {operation: 'removeProperties', properties: ['another']},
@@ -64,7 +64,7 @@ describe('transformState', function(){
                 {operation: 'removeProperties', properties: ['name', 'hello']}
             ];
             const result = transformState(state, transforms)
-            
+
             expect(result).toStrictEqual({ foo: 'bar' })
         }
     );
