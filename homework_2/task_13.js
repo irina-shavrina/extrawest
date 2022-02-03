@@ -1,10 +1,9 @@
-// const makeCounter = (number) => {
-//     let result;
-    
-//     return () => {
-//         for(let i = 0; i < number.length; i++){
-//             result += number[i];
-//         }
-//     };
-//  }
- 
+export const createAdder = (number = 0) => {
+    let result = number;
+    return (...numbers) => {
+        for(const item of numbers)
+            result += item;
+        return result;
+    }
+}
+let adder = createAdder();

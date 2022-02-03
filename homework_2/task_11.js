@@ -11,5 +11,3 @@ export const makeArmy = (countOfEntities) =>{
     }
     return arrayOfNumbers;
 }
-
-let res = makeArmy(5)
