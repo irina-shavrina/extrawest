@@ -8,6 +8,7 @@ export const transformStateWithClones = (state, transforms) => {
     return result;
 }
 const detectTransform = (state, transform) => {
+    console.log(state);
     switch(transform.operation){
         case operations[0]:
             addProperties(state, transform.properties);

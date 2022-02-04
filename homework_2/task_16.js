@@ -1,13 +1,7 @@
-const alphabet = 'abcdefghijklmnopqrstuvwxyz';
-
-export const fearNotLetter  = (string) => {
-    const alphabetSlice = alphabet.slice(alphabet.indexOf(string[0]), 
-                        alphabet.indexOf(string[string.length - 1]));
-
-    for(let i = 0; i < alphabetSlice.length; i++){
-        if(!string.includes(alphabetSlice[i])){
-            return alphabetSlice[i];
+export const fearNotLetter = (string) => {
+    for(let i = 0; i < string.length-1; i++){
+        if(string.charCodeAt(i+1) - string.charCodeAt(i) > 1){
+            return String.fromCharCode(string.charCodeAt(i) + 1);
         }
     }
-    return undefined;
 }

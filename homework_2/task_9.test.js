@@ -16,6 +16,7 @@ describe('transformStateWithClones', () => {
                 {foo: 'bar', name: 'Jim'},
                 {foo: 'bar', name: 'Jim', another: 'one'}
                     ])
+            expect(state).toEqual({foo: 'bar', bar: 'foo'});
         }
     );
     test('should return { foo: "bar", name: "Jim" } from object',
@@ -35,6 +36,7 @@ describe('transformStateWithClones', () => {
                 {},
                 {foo: 'bar', name: 'Jim'}
                     ])
+            expect(state).toEqual({foo: 'bar', bar: 'foo'});
         }
     );
     test('should return { foo: "bar", name: "Jim" } from object',
@@ -46,6 +48,8 @@ describe('transformStateWithClones', () => {
             const result = transformState(state, transforms)
                     
             expect(result).toStrictEqual([{name: 'Jim'}])
+            expect(state).toEqual({});
+            
     }
 );
 });
