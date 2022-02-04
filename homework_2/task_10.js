@@ -4,12 +4,13 @@ export const invertObject = (object) =>{
 
     const result = {}
     for(let index = 0, length = keys.length; index < length; ++index){
-        const keyToInsert = values[index];
-
-        if(keyToInsert in result){
-            return null
+        
+        if(result.hasOwnProperty(values[index])){
+            return null;
         }
-        result[keyToInsert] = keys[index]
+        
+        const keyToInsert = values[index];
+        result[keyToInsert] = keys[index];
     }
 
     return result;

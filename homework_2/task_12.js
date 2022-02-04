@@ -1,5 +1,5 @@
 export const createPrevArgSaver = () => {
-    let timesVariable = undefined;
+    let timesVariable;
     return (number) => {
         let result = timesVariable;
         timesVariable = number;
