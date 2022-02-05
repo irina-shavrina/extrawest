@@ -4,9 +4,8 @@ export const transformStateWithClones = (state, transforms) => {
     let objectToWork = JSON.parse(JSON.stringify(state));
 
     for (const item of transforms){
-        const transformResult = detectTransform(objectToWork, item);
-        result.push(transformResult);
-        objectToWork = transformResult;
+        objectToWork = detectTransform(objectToWork, item);
+        result.push(objectToWork);
     }
     return result;
 }
