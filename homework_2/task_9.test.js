@@ -9,12 +9,12 @@ describe('transformStateWithClones', () => {
                 {operation: 'removeProperties', properties: ['bar', 'hello']},
                 {operation: 'addProperties', properties: {another: 'one'}}
             ];
-            const result = transformState(state, transforms)
+            const result = transformStateWithClones(state, transforms)
                     
             expect(result).toStrictEqual([
                 {foo: 'bar', bar: 'foo', name: 'Jim', hello: 'world'},
-                {foo: 'bar', name: 'Jim'},
-                {foo: 'bar', name: 'Jim', another: 'one'}
+	            {foo: 'bar', name: 'Jim'},
+	            {foo: 'bar', name: 'Jim', another: 'one'}
                     ])
             expect(state).toEqual({foo: 'bar', bar: 'foo'});
         }
@@ -28,7 +28,7 @@ describe('transformStateWithClones', () => {
                 {operation: 'clear'},
                 {operation: 'addProperties', properties: {foo: 'bar', name: 'Jim'}}
             ];
-            const result = transformState(state, transforms)
+            const result = transformStateWithClones(state, transforms)
                     
             expect(result).toStrictEqual([
                 {foo: 'bar', bar: 'foo', yet: 'another property'},
@@ -45,7 +45,7 @@ describe('transformStateWithClones', () => {
             const transforms =  [
                 {operation: 'addProperties', properties: { name: 'Jim' }}
             ];
-            const result = transformState(state, transforms)
+            const result = transformStateWithClones(state, transforms)
                     
             expect(result).toStrictEqual([{name: 'Jim'}])
             expect(state).toEqual({});
@@ -53,3 +53,4 @@ describe('transformStateWithClones', () => {
     }
 );
 });
+

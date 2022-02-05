@@ -1,39 +1,55 @@
-const operations = ['addProperties', 'removeProperties', 'clear']
+const operations = ['addProperties', 'removeProperties', 'clear'];
 export const transformStateWithClones = (state, transforms) => {
-    const result = []
-    for (let item of transforms){
-        result.push(detectTransform({...state}, item));
+    const result = [];
+    let objectToWork = JSON.parse(JSON.stringify(state));
+
+    for (const item of transforms){
+        const transformResult = detectTransform(objectToWork, item);
+        result.push(transformResult);
+        objectToWork = transformResult;
     }
-    result.push(state)
     return result;
 }
 const detectTransform = (state, transform) => {
-    console.log(state);
+    const stateCopy = JSON.parse(JSON.stringify(state));
     switch(transform.operation){
         case operations[0]:
-            addProperties(state, transform.properties);
+            addProperties(stateCopy, transform.properties);
             break;
         case operations[1]:
-            removeProperties(state, transform.properties);
+            removeProperties(stateCopy, transform.properties);
             break;
         case operations[2]:
-            clear(state);
+            clear(stateCopy);
             break;
     }
-    return state;
+    return stateCopy;
+
 }
 const addProperties = (state, properties) => {
     for(let item in properties){
         state[item] = properties[item];
     }
+    return state;
 }
 const removeProperties = (state, properties) => {
     for(let item of properties){
         delete state[item];
     }
+    return state;
 }
 const clear = (state) => {
     for(let item in state){
         delete state[item];
     }
+    return state;
 }
+// console.log(transformStateWithClones(
+//     {foo: 'bar', bar: 'foo'},
+//     [
+//   {operation: 'addProperties', properties: {name: 'Jim', hello: 'world'}}, 
+//   {operation: 'removeProperties', properties: ['bar', 'hello']},
+//   {operation: 'addProperties', properties: {another: 'one'}}
+//     ]
+//   ) 
+//   )
