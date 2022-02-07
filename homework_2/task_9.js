@@ -1,14 +1,15 @@
 const operations = ['addProperties', 'removeProperties', 'clear'];
 export const transformStateWithClones = (state, transforms) => {
     const result = [];
-    let objectToWork = JSON.parse(JSON.stringify(state));
+    let objectToWork = { ...state};
 
     for (const item of transforms){
         objectToWork = detectTransform(objectToWork, item);
-        result.push(objectToWork);
+        result.push({...objectToWork});
     }
+
     return result;
-}
+};
 const detectTransform = (state, transform) => {
     const stateCopy = JSON.parse(JSON.stringify(state));
     switch(transform.operation){
@@ -43,12 +44,4 @@ const clear = (state) => {
     }
     return state;
 }
-// console.log(transformStateWithClones(
-//     {foo: 'bar', bar: 'foo'},
-//     [
-//   {operation: 'addProperties', properties: {name: 'Jim', hello: 'world'}}, 
-//   {operation: 'removeProperties', properties: ['bar', 'hello']},
-//   {operation: 'addProperties', properties: {another: 'one'}}
-//     ]
-//   ) 
-//   )
+

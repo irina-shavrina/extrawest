@@ -1,7 +1,7 @@
 export const createPrevArgSaver = () => {
     let timesVariable;
     return (number) => {
-        let result = timesVariable;
+        const result = timesVariable;
         timesVariable = number;
         return result;
     }
