@@ -9,19 +9,18 @@ body {
   opacity: 0;
 }
 .title{
-  // display: flex;
-  // flex-direction: column;
   font-size: 24px;
   cursor: pointer;
-  border: 1px solid lightcoral;
   color: lightcoral;
   border-radius: 3px;
   margin-bottom: 7px;
-  background-color: cornsilk;
   padding: 4px;
 }
-.title:hover {
-  background-color: lightcoral;
-  color: cornsilk;
+
+ul > li:hover{
   font-weight: bold;
+}
+
+ul > li:hover > ul{
+  font-weight: normal;
 }

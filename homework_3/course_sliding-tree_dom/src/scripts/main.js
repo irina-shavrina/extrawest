@@ -1,17 +1,15 @@
 'use strict';
-const showCategories = () =>{
-    const header = document.getElementsByClassName('item');
-    for(let item of header){
-        item.addEventListener('click', () => {
-            for(let element of item.children){
-                if(element.hidden === false){
-                    element.hidden = true;
-                }
-                else{
-                    element.hidden = false;
-                }
+const showCategories = () => {
+    const main = document.querySelector('.tree');
+    const elementsLi = document.querySelectorAll('li');
+
+    main.addEventListener('click', (event) => {
+        const item = event.target;
+        if(item.tagName === "LI"){
+            if(item.children.length > 0) {
+                item.children[0].hidden = !item.children[0].hidden
             }
-        })
-    }
+        }
+})
 }
 showCategories();
