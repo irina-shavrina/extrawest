@@ -1,0 +1,41 @@
+@import "utils";
+@import "fonts";
+@import "typography";
+
+body {
+  margin: 0;
+  padding: 0;
+}
+li{
+  list-style-type: none; 
+  display:inline-block;
+}
+.gallery{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+.gallery__list{
+  display: flex;
+  flex-direction: row;
+
+}
+.list-item{
+  margin-top: -20px;
+  padding: 3px 3px 0px 3px;
+  align-items: center;
+  border: 1px solid gray;
+}
+#largeImg{
+  padding: 5px;
+  border: 1px solid gray;
+  width: 1020px;
+  margin-left: 40px;
+}
+.first-img{
+  height: 140px;
+  width: 250px;
+}
