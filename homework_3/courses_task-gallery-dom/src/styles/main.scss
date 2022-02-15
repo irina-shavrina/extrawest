@@ -17,11 +17,11 @@ li{
   align-items: center;
   justify-content: center;
 
-}
-.gallery__list{
-  display: flex;
-  flex-direction: row;
-
+  &__list{
+    display: flex;
+    flex-direction: row;
+  
+  }
 }
 .list-item{
   margin-top: -20px;
