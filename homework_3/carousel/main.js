@@ -5,48 +5,46 @@ let slideIndex = 0;
 let timeoutID = null;
 
 let images = [
-  "img/spring.jpg",
-  "img/summer.jpg",
-  "img/authum.jpg",
-  "img/winter.jpg"
+    "img/spring.jpg",
+    "img/summer.jpg",
+    "img/autumn.jpg",
+    "img/winter.jpg"
 ];
 
-addPhotosToPage();
 
-showSlides();
 
-function addPhotosToPage(){
+const addPhotosToPage = () => {
     images.forEach((element, index) => {
-       const wrapper = document.createElement("div");
-       wrapper.classList.add("my-slides")
-      
-       const numberOfSlide = document.createElement("div");
-       numberOfSlide.classList.add("numbertext");
-       numberOfSlide.innerHTML = `${index + 1}/${images.length}`;
+        const wrapper = document.createElement("div");
+        wrapper.classList.add("my-slides")
+        
+        const numberOfSlide = document.createElement("div");
+        numberOfSlide.classList.add("numbertext");
+        numberOfSlide.innerHTML = `${index + 1}/${images.length}`;
 
-       const image = document.createElement("img");
-       image.classList.add("img-width");
-       image.setAttribute("src", element);
+        const image = document.createElement("img");
+        image.classList.add("img-width");
+        image.setAttribute("src", element);
 
-       wrapper.appendChild(numberOfSlide);
-       wrapper.appendChild(image);
+        wrapper.appendChild(numberOfSlide);
+        wrapper.appendChild(image);
 
-       slidersContainer.appendChild(wrapper);
+        slidersContainer.appendChild(wrapper);
     });
     slides = document.getElementsByClassName("my-slides");
 
 }
-function plusSlides() {
+const plusSlides = () =>  {
     slideIndex+=1;
     showSlides(true);
 }
 
-function previousSlide() {
+const previousSlide = () =>  {
     slideIndex-=1;
     showSlides(true);
 }
 
-function showSlides(isClickedByUser = false) {
+const showSlides = (isClickedByUser = false) => {
     if(timeoutID != null){
         clearTimeout(timeoutID);
     }
@@ -68,3 +66,7 @@ function showSlides(isClickedByUser = false) {
 
     timeoutID = setTimeout(showSlides, 3000);
   }
+
+addPhotosToPage();
+
+showSlides();
