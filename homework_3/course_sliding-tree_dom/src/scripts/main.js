@@ -1,7 +1,6 @@
 'use strict';
 const showCategories = () => {
     const main = document.querySelector('.tree');
-    const elementsLi = document.querySelectorAll('li');
 
     main.addEventListener('click', (event) => {
         const item = event.target;
