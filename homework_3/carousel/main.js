@@ -11,8 +11,6 @@ let images = [
     "img/winter.jpg"
 ];
 
-
-
 const addPhotosToPage = () => {
     images.forEach((element, index) => {
         const wrapper = document.createElement("div");
@@ -49,21 +47,22 @@ const showSlides = (isClickedByUser = false) => {
         clearTimeout(timeoutID);
     }
     for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-        // slides[i].style.translate = '100%';
+        slides[i].style.opacity = "0";
+        slides[i].style.visibility = "hidden";
     }
+
     if(!isClickedByUser){
         slideIndex++;
     }
+
     if (slideIndex > slides.length) {
         slideIndex = 1;
-    }
-    else if (slideIndex <= 0) {
+    } else if (slideIndex <= 0) {
         slideIndex = slides.length;
     }
-    slides[slideIndex-1].style.display = "block";
+    slides[slideIndex-1].style.opacity = "1";
+    slides[slideIndex-1].style.visibility = "visible";
     
-
     timeoutID = setTimeout(showSlides, 3000);
   }
 
