@@ -46,9 +46,9 @@ const showSlides = (isClickedByUser = false) => {
     if(timeoutID != null){
         clearTimeout(timeoutID);
     }
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.opacity = "0";
-        slides[i].style.visibility = "hidden";
+    for (let item of slides) {
+        item.style.opacity = "0";
+        item.style.visibility = "hidden";
     }
 
     if(!isClickedByUser){
