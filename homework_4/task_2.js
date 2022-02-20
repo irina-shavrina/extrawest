@@ -1,3 +1,5 @@
+'use strict';
+
 const usersWithCompletedTodos = () =>{
   const usersUrl = 'https://jsonplaceholder.typicode.com/users';
   const todosUrl = 'https://jsonplaceholder.typicode.com/todos';

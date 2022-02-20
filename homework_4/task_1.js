@@ -1,4 +1,6 @@
-const getAllProducts = () =>{
+'use strict';
+
+const getAllProducts = () => {
   const getAllProductsUrl = 'https://fakestoreapi.com/products';
 
   return fetch(getAllProductsUrl)
