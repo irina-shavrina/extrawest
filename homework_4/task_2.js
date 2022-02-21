@@ -1,6 +1,6 @@
 'use strict';
 
-const usersWithCompletedTodos = () =>{
+export const usersWithCompletedTodos = () =>{
   const usersUrl = 'https://jsonplaceholder.typicode.com/users';
   const todosUrl = 'https://jsonplaceholder.typicode.com/todos';
   const urls =[usersUrl, todosUrl];
@@ -13,4 +13,4 @@ const usersWithCompletedTodos = () =>{
     })));
 };
 
-usersWithCompletedTodos().then(console.log);
+// usersWithCompletedTodos().then(console.log);

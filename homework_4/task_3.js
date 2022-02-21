@@ -23,7 +23,7 @@ export const getUsersWihPosts = async() =>{
         title: post.title,
         comments: getAllPostCommentPosts(post.id, values[2].data),
       })),
-    })),
+    }))
   }
   catch{
     console.log("error");

@@ -71,3 +71,16 @@ describe('usersWithCompletedTodos', () => {
     });
   });
 });
+
+// describe('getUsersWithPosts', () =>{
+//   const users = [
+//     {
+//       id: 1, name: 'John',
+//     },
+//   ];
+//   const posts = [
+//     {
+//       userId: 1, title: 'Test post', id: 1,
+//     },
+//   ];
+// });
