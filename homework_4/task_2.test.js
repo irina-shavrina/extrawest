@@ -42,8 +42,20 @@ const users = [
         "userId": 1,
         "id": 1,
         "title": "delectus aut autem",
-        "completed": false
-      },
+        "completed": true
+    },
+    {
+        "userId": 1,
+        "id": 2,
+        "title": "delectus aut autem",
+        "completed": true
+    },
+    {
+        "userId": 1,
+        "id": 3,
+        "title": "delectus aut autem",
+        "completed": true
+    },
   ];
   
 
@@ -59,22 +71,28 @@ describe('usersWithCompletedTodos', () => {
 
   test('usersWithCompletedTodos', async() => {
     const result = await usersWithCompletedTodos();
-
-    expect(result).toEqual([{id: 1,
-        todos: {
-        0: {userId: 1, id: 4, title: 'et porro tempora', completed: true},
-        1: {userId: 1, id: 8, title: 'quo adipisci enim quam ut ab', completed: true},
-        2: {userId: 1, id: 10, title: 'illo est ratione doloremque quia maiores aut', completed: true},
-        3: {userId: 1, id: 11, title: 'vero rerum temporibus dolor', completed: true},
-        4: {userId: 1, id: 12, title: 'ipsa repellendus fugit nisi', completed: true},
-        5: {userId: 1, id: 14, title: 'repellendus sunt dolores architecto voluptatum', completed: true},
-        6: {userId: 1, id: 15, title: 'ab voluptatum amet voluptas', completed: true},
-        7: {userId: 1, id: 16, title: 'accusamus eos facilis sint et aut voluptatem', completed: true},
-        8: {userId: 1, id: 17, title: 'quo laboriosam deleniti aut qui', completed: true},
-        9: {userId: 1, id: 19, title: 'molestiae ipsa aut voluptatibus pariatur dolor nihil', completed: true},
-        10: {userId: 1, id: 20, title: 'ullam nobis libero sapiente ad optio sint', completed: true}
-        },
-        username: "Bret"
+    expect(result).toEqual([{"id": 1,
+        "todos": [
+            {
+                "userId": 1,
+                "id": 1,
+                "title": "delectus aut autem",
+                "completed": true
+            },
+            {
+                "userId": 1,
+                "id": 2,
+                "title": "delectus aut autem",
+                "completed": true
+            },
+            {
+                "userId": 1,
+                "id": 3,
+                "title": "delectus aut autem",
+                "completed": true
+            },
+        ],
+        "username": "Bret"
     }]);
   });
 

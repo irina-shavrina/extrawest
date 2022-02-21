@@ -5,13 +5,14 @@ export const getUsersWihPosts = async() =>{
   const postsUrl = 'https://jsonplaceholder.typicode.com/posts';
   const commentsUrl = 'https://jsonplaceholder.typicode.com/comments';
   
-  const UserData = await axios(usersUrl);
-  const PostsData = await axios(postsUrl);
-  const CommentsData = await axios(commentsUrl);
+  const userData = await axios(usersUrl);
+  const postsData = await axios(postsUrl);
+  const commentsData = await axios(commentsUrl);
+  console.log(userData);
 
-  const users = UserData.data;
-  const posts = PostsData.data;
-  const comments = CommentsData.data;
+  const users = userData.data;
+  const posts = postsData.data;
+  const comments = commentsData.data;
 
   try {
     return values => 
@@ -21,7 +22,7 @@ export const getUsersWihPosts = async() =>{
       posts: getAllUserPosts(user.id, posts.data).map(post => ({
         id: post.id,
         title: post.title,
-        comments: getAllPostCommentPosts(post.id, values[2].data),
+        comments: getAllPostCommentPosts(post.id, comments.data),
       })),
     }))
   }
@@ -32,3 +33,5 @@ export const getUsersWihPosts = async() =>{
 
 const getAllUserPosts = (userId, posts) => posts.filter(post => post.userId === userId);
 const getAllPostCommentPosts = (postId, comments) => comments.filter(comment => comment.postId === postId);
+
+console.log(getUsersWihPosts);
