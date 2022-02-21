@@ -96,7 +96,7 @@ describe('usersWithCompletedTodos', () => {
     }]);
   });
 
-  test('fetch should be called once with https://fakestoreapi.com/products', async() =>{
+  test('fetch should be called twice with https://jsonplaceholder.typicode.com/users and https://jsonplaceholder.typicode.com/todos', async() =>{
     await usersWithCompletedTodos();
 
     expect(fetch).toHaveBeenCalledTimes(2);
