@@ -33,5 +33,4 @@ export const getUsersWihPosts = async() =>{
 
 const getAllUserPosts = (userId, posts) => posts.filter(post => post.userId === userId);
 const getAllPostCommentPosts = (postId, comments) => comments.filter(comment => comment.postId === postId);
-
-console.log(getUsersWihPosts);
+;
