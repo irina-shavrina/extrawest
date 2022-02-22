@@ -14,14 +14,18 @@ export const getUsersWithPosts = async() =>{
   const posts = postsData.data;
   const comments = commentsData.data;
 
-  return users.map(user => ({
-    ...user,
-    posts: getAllUserPosts(user.id, posts).map(post => ({
-      ...post,
-      comments: getAllPostComments(post.id, comments),
-    })),
-  }))
-
+  try{
+    return users.map(user => ({
+      ...user,
+      posts: getAllUserPosts(user.id, posts).map(post => ({
+        ...post,
+        comments: getAllPostComments(post.id, comments),
+      })),
+    }))
+  }
+  catch{
+    console.log("Error");
+  }
 }
 
 const getAllUserPosts = (userId, posts) => posts.filter(post => post.userId === userId);

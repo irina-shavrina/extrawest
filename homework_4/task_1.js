@@ -11,4 +11,4 @@ export const getAllProducts = () => {
 };
 
 const productsComparer = (item1, item2) => (item1.category.localeCompare(item2.category) || item2.price - item1.price);
-
+  
