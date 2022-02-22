@@ -1,8 +1,10 @@
 'use strict';
 
+require('dotenv').config()
+
 export const usersWithCompletedTodos = () =>{
-  const usersUrl = 'https://jsonplaceholder.typicode.com/users';
-  const todosUrl = 'https://jsonplaceholder.typicode.com/todos';
+  const usersUrl = process.env.USERS_URL;
+  const todosUrl = process.env.TODOS_URL;
   const urls =[usersUrl, todosUrl];
   
   return Promise.all(urls.map(url => fetch(url).then(resp => resp.json())))
@@ -12,5 +14,3 @@ export const usersWithCompletedTodos = () =>{
       todos: data[1].filter(todo => todo.userId === user.id && todo.completed),
     })));
 };
-
-// usersWithCompletedTodos().then(console.log);

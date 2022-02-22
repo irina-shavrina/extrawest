@@ -6,7 +6,7 @@
   "jest": {
     "verbose": true
   },
-  "type": "module", 
+  "type": "module",
   "directories": {
     "example": "example"
   },

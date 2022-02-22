@@ -1,9 +1,9 @@
 import axios from 'axios';
-
+require('dotenv').config()
 export const getUsersWithPosts = async() =>{
-  const usersUrl = 'https://jsonplaceholder.typicode.com/users';
-  const postsUrl = 'https://jsonplaceholder.typicode.com/posts';
-  const commentsUrl = 'https://jsonplaceholder.typicode.com/comments';
+  const usersUrl = process.env.USERS_URL;
+  const postsUrl = process.env.POSTS_URL;
+  const commentsUrl = process.env.COMMENT_URL;
   
   const userData = await axios(usersUrl);
   const postsData = await axios(postsUrl);
